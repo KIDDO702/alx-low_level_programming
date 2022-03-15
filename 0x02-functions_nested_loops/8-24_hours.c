@@ -1,26 +1,49 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
-* jack_bauer - prints a 24 hour timer
-* Description: prints every minute
-*/
+ * jack_bauer - prints every minute of the day of Jack Bauer
+ * Return:void
+ */
+
 void jack_bauer(void)
 {
-	int time;
-	int x;
 
-	time = 0;
+int h1;
+int h2;
+int m1;
+int m2;
+int a = 9;
 
-	while (time < 24)
+h2 = 0;
+while (h2 <= 2)
+{
+	if (h2 == 2)
 	{
-		for (x = 0; x < 60; x++)
-		{
-			_putchar(time / 10 + 48);
-			_putchar(time % 10 + 48);
-			_putchar(':');
-			_putchar(x / 10 + 48);
-			_putchar(x % 10 + 48);
-			_putchar('\n');
-		}
-		time++;
+		/*Restrain to 23h, not 29*/
+		a = 3;
 	}
+	h1 = 0;
+	while (h1 <= a)
+	{
+		m2 = 0;
+		while (m2 <= 5)
+		{
+			m1 = 0;
+			while (m1 <= 9)
+			{
+				_putchar('0' + h2);
+				_putchar('0' + h1);
+				_putchar(':');
+				_putchar('0' + m2);
+				_putchar('0' + m1);
+				_putchar('\n');
+				m1++;
+			}
+			m2++;
+		}
+		h1++;
+	}
+	h2++;
+}
+
 }
