@@ -1,9 +1,10 @@
 #include "holberton.h"
-
 /**
- * main -  prints Holberton, followed by a new line
- * Return: Always 0 (Success)
- */
+* main - prints a string
+* Description: the string is "Holberton"
+*
+* Return: 0
+*/
 int main(void)
 {
 	_putchar('H');
